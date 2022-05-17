@@ -1,0 +1,44 @@
+.wrapper {
+  max-width: 600px;
+  padding: 50px;
+  background-color: #d7d7d7;
+
+  input,
+  select,
+  button {
+    cursor: pointer;
+  }
+
+  strong {
+    margin: 0 10px 0 0;
+  }
+
+  div {
+    margin: 10px 0;
+  }
+
+  .period {
+    select {
+      margin: 0 5px;
+    }
+
+    input {
+      max-width: 30px;
+      margin: 0 5px;
+    }
+
+    .button-add {
+      background-color: #00fa21;
+      border: none;
+    }
+  }
+
+  .wrapper-periods {
+
+    .remove-period {
+      margin: 0 0 0 10px;
+      color: red;
+      cursor: pointer;
+    }
+  }
+}

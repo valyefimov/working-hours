@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <form action="#" [formGroup]="addDataForm" (ngSubmit)="onSubmit()">
+    <div class="date">
+      <strong>Дата:</strong>
+      <input
+        type="date"
+        id="date"
+        name="date"
+        min="2022-05-01"
+        formControlName="date"
+      >
+    </div>
+
+    <div class="period">
+      <strong>Время:</strong>
+      <span>с</span>
+      <select formControlName="startHour">
+        <option *ngFor="let hour of hours" [ngValue]="hour">{{hour}}</option>
+      </select>
+      <span>:</span>
+      <select formControlName="startMinute">
+        <option *ngFor="let minute of minutes" [ngValue]="minute">{{minute}}</option>
+      </select>
+      <span>до</span>
+      <select formControlName="endHour">
+        <option *ngFor="let hour of hours" [ngValue]="hour">{{hour}}</option>
+      </select>
+      <span>:</span>
+      <select formControlName="endMinute">
+        <option *ngFor="let minute of minutes" [ngValue]="minute">{{minute}}</option>
+      </select>
+      <button class="button-add" (click)="addPeriod()">+ Добавить</button>
+    </div>
+
+    <div class="wrapper-periods" *ngFor="let period of periods; let i = index">
+      <span>{{period}}</span>
+      <span class="remove-period" (click)="onRemove(i)">x</span>
+    </div>
+
+    <button type="submit">Сохранить</button>
+  </form>
+</div>
