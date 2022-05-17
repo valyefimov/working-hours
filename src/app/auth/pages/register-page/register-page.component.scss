@@ -1,0 +1,24 @@
+@import "../../../../assets/scss/variables";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-container {
+    width: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: $color-gray;
+
+    .container {
+      h1 {
+        margin: 0 0 20px;
+      }
+    }
+
+    .text-container {
+      margin: 20px 0 0;
+    }
+  }
+}
