@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "working-hours:build:production",
+            "firebaseProject": "working-hours-28f84",
+            "firebaseHostingSite": "working-hours-28f84"
+          }
         }
       }
     }

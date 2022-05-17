@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "working-hours-28f84": {
+      "hosting": {
+        "working-hours": [
+          "working-hours-28f84"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "working-hours-28f84"
+  }
+}
