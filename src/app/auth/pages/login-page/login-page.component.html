@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="login-container">
+    <div class="form-container">
+      <h1>Вход</h1>
+      <button class="google-button" (click)="loginWithGoogle()">
+        Войти через Google
+      </button>
+      <app-login-form (formData)="login($event)"></app-login-form>
+      <div class="text-container">
+        <a routerLink="/register">Регистрация</a>
+      </div>
+    </div>
+  </div>
+</div>

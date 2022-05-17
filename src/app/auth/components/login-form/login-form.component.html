@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label>Email</label>
+    <input formControlName="email" type="text" required />
+    <span class="error" *ngIf="email?.hasError('required')">
+      Email обязательный для заполнения.
+    </span>
+    <span class="error" *ngIf="email?.hasError('email')">
+      Email недействителен. Пожалуйста, введите действительный адрес электронной почты.
+    </span>
+  </div>
+  <div class="form-control">
+    <label>Пароль</label>
+    <input formControlName="password" type="password" required />
+    <span class="error" *ngIf="password?.hasError('required')">
+      Пароль обязательный для заполнения.
+    </span>
+  </div>
+  <div class="form-footer">
+    <button type="submit">
+      Отправить
+    </button>
+  </div>
+</form>
